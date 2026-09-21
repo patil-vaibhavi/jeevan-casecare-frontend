@@ -16,7 +16,7 @@ import DoctorVerification from "../pages/doctor/DoctorVerification";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import DoctorVerificationReview from "../pages/admin/DoctorVerificationReview";
 import EmergencyDashboard from "../pages/emergency/EmergencyDashboard";
-
+import EmergencySettings from "../pages/emergency/EmergencySettings";
 import DashboardLayout from "../components/layout/DashboardLayout";
 
 /*
@@ -104,16 +104,7 @@ export default function AppRoutes() {
           </ProtectedRoute>
         }
       />
-    <Route
-  path="/patient/health-profile"
-  element={
-    <ProtectedRoute role="patient">
-      <DashboardLayout role="patient">
-        <HealthProfilePage />
-      </DashboardLayout>
-    </ProtectedRoute>
-  }
-/>
+
 
       {/* =========================
           PATIENT NEW CASE
@@ -244,7 +235,16 @@ export default function AppRoutes() {
           </ProtectedRoute>
         }
       />
-
+    <Route
+  path="/emergency/settings"
+  element={
+    <ProtectedRoute role="emergency">
+      <DashboardLayout role="emergency">
+        <EmergencySettings />
+      </DashboardLayout>
+    </ProtectedRoute>
+  }
+/>
 
       {/* =========================
           UNKNOWN ROUTES

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
@@ -75,18 +76,15 @@ const STORAGE_KEY = "jeevanDoctorIdentityRequests";
 const adminTranslations = {
   en: {
     dashboard: "Admin Dashboard",
-    description:
-      "Manage doctor identity verification requests.",
-    secureWorkspace:
-      "Secure administrator workspace",
+    description: "Manage doctor identity verification requests.",
+    secureWorkspace: "Secure administrator workspace",
 
     pendingReview: "Pending Review",
     moreInformation: "More Information",
     identityVerified: "Identity Verified",
     rejected: "Rejected",
 
-    verificationRequests:
-      "Doctor Verification Requests",
+    verificationRequests: "Doctor Verification Requests",
     verificationDescription:
       "Review and verify doctor identity credentials.",
 
@@ -99,8 +97,7 @@ const adminTranslations = {
     status: "Status",
     review: "Review",
 
-    noRequests:
-      "No doctor verification requests found.",
+    noRequests: "No doctor verification requests found.",
 
     identityNote:
       "Doctor Identity Verification is separate from Doctor Case Verification.",
@@ -111,24 +108,21 @@ const adminTranslations = {
     rejectedStatus: "Rejected",
 
     complete: "Complete",
-    additionalDocument:
-      "Additional document requested",
+    additionalDocument: "Additional document requested",
   },
 
   mr: {
     dashboard: "अॅडमिन डॅशबोर्ड",
     description:
       "डॉक्टर ओळख पडताळणी विनंत्या व्यवस्थापित करा.",
-    secureWorkspace:
-      "सुरक्षित प्रशासकीय कार्यक्षेत्र",
+    secureWorkspace: "सुरक्षित प्रशासकीय कार्यक्षेत्र",
 
     pendingReview: "पडताळणी प्रलंबित",
     moreInformation: "अधिक माहिती",
     identityVerified: "ओळख पडताळलेली",
     rejected: "नाकारले",
 
-    verificationRequests:
-      "डॉक्टर पडताळणी विनंत्या",
+    verificationRequests: "डॉक्टर पडताळणी विनंत्या",
     verificationDescription:
       "डॉक्टरांच्या ओळख प्रमाणपत्रांचे पुनरावलोकन आणि पडताळणी करा.",
 
@@ -153,24 +147,21 @@ const adminTranslations = {
     rejectedStatus: "नाकारलेले",
 
     complete: "पूर्ण",
-    additionalDocument:
-      "अतिरिक्त दस्तऐवजाची विनंती केली आहे",
+    additionalDocument: "अतिरिक्त दस्तऐवजाची विनंती केली आहे",
   },
 
   hi: {
     dashboard: "एडमिन डैशबोर्ड",
     description:
       "डॉक्टर पहचान सत्यापन अनुरोधों को प्रबंधित करें।",
-    secureWorkspace:
-      "सुरक्षित प्रशासकीय कार्यक्षेत्र",
+    secureWorkspace: "सुरक्षित प्रशासकीय कार्यक्षेत्र",
 
     pendingReview: "समीक्षा लंबित",
     moreInformation: "अधिक जानकारी",
     identityVerified: "पहचान सत्यापित",
     rejected: "अस्वीकृत",
 
-    verificationRequests:
-      "डॉक्टर सत्यापन अनुरोध",
+    verificationRequests: "डॉक्टर सत्यापन अनुरोध",
     verificationDescription:
       "डॉक्टर की पहचान संबंधी प्रमाण-पत्रों की समीक्षा और सत्यापन करें।",
 
@@ -183,8 +174,7 @@ const adminTranslations = {
     status: "स्थिति",
     review: "समीक्षा",
 
-    noRequests:
-      "डॉक्टर सत्यापन के कोई अनुरोध नहीं मिले।",
+    noRequests: "डॉक्टर सत्यापन के कोई अनुरोध नहीं मिले।",
 
     identityNote:
       "डॉक्टर पहचान सत्यापन, डॉक्टर केस सत्यापन से अलग है।",
@@ -195,24 +185,21 @@ const adminTranslations = {
     rejectedStatus: "अस्वीकृत",
 
     complete: "पूर्ण",
-    additionalDocument:
-      "अतिरिक्त दस्तावेज़ का अनुरोध किया गया है",
+    additionalDocument: "अतिरिक्त दस्तावेज़ का अनुरोध किया गया है",
   },
 
   gu: {
     dashboard: "એડમિન ડેશબોર્ડ",
     description:
       "ડૉક્ટરની ઓળખ ચકાસણી વિનંતીઓનું સંચાલન કરો.",
-    secureWorkspace:
-      "સુરક્ષિત પ્રશાસકીય કાર્યક્ષેત્ર",
+    secureWorkspace: "સુરક્ષિત પ્રશાસકીય કાર્યક્ષેત્ર",
 
     pendingReview: "સમીક્ષા બાકી",
     moreInformation: "વધુ માહિતી",
     identityVerified: "ઓળખ ચકાસાયેલ",
     rejected: "નકારાયેલ",
 
-    verificationRequests:
-      "ડૉક્ટર ચકાસણી વિનંતીઓ",
+    verificationRequests: "ડૉક્ટર ચકાસણી વિનંતીઓ",
     verificationDescription:
       "ડૉક્ટરની ઓળખ સંબંધિત પ્રમાણપત્રોની સમીક્ષા અને ચકાસણી કરો.",
 
@@ -225,8 +212,7 @@ const adminTranslations = {
     status: "સ્થિતિ",
     review: "સમીક્ષા",
 
-    noRequests:
-      "ડૉક્ટર ચકાસણીની કોઈ વિનંતીઓ મળી નથી.",
+    noRequests: "ડૉક્ટર ચકાસણીની કોઈ વિનંતીઓ મળી નથી.",
 
     identityNote:
       "ડૉક્ટરની ઓળખ ચકાસણી, ડૉક્ટર કેસ ચકાસણીથી અલગ છે.",
@@ -245,16 +231,14 @@ const adminTranslations = {
     dashboard: "ಅಡ್ಮಿನ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
     description:
       "ವೈದ್ಯರ ಗುರುತು ಪರಿಶೀಲನೆ ವಿನಂತಿಗಳನ್ನು ನಿರ್ವಹಿಸಿ.",
-    secureWorkspace:
-      "ಸುರಕ್ಷಿತ ಆಡಳಿತ ಕಾರ್ಯಕ್ಷೇತ್ರ",
+    secureWorkspace: "ಸುರಕ್ಷಿತ ಆಡಳಿತ ಕಾರ್ಯಕ್ಷೇತ್ರ",
 
     pendingReview: "ಪರಿಶೀಲನೆ ಬಾಕಿಯಿದೆ",
     moreInformation: "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ",
     identityVerified: "ಗುರುತು ಪರಿಶೀಲಿಸಲಾಗಿದೆ",
     rejected: "ತಿರಸ್ಕರಿಸಲಾಗಿದೆ",
 
-    verificationRequests:
-      "ವೈದ್ಯರ ಪರಿಶೀಲನೆ ವಿನಂತಿಗಳು",
+    verificationRequests: "ವೈದ್ಯರ ಪರಿಶೀಲನೆ ವಿನಂತಿಗಳು",
     verificationDescription:
       "ವೈದ್ಯರ ಗುರುತು ದಾಖಲೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ದೃಢೀಕರಿಸಿ.",
 
@@ -279,24 +263,21 @@ const adminTranslations = {
     rejectedStatus: "ತಿರಸ್ಕರಿಸಲಾಗಿದೆ",
 
     complete: "ಪೂರ್ಣ",
-    additionalDocument:
-      "ಹೆಚ್ಚುವರಿ ದಾಖಲೆ ವಿನಂತಿಸಲಾಗಿದೆ",
+    additionalDocument: "ಹೆಚ್ಚುವರಿ ದಾಖಲೆ ವಿನಂತಿಸಲಾಗಿದೆ",
   },
 
   ta: {
     dashboard: "நிர்வாக டாஷ்போர்டு",
     description:
       "மருத்துவர் அடையாள சரிபார்ப்பு கோரிக்கைகளை நிர்வகிக்கவும்.",
-    secureWorkspace:
-      "பாதுகாப்பான நிர்வாக பணியிடம்",
+    secureWorkspace: "பாதுகாப்பான நிர்வாக பணியிடம்",
 
     pendingReview: "மதிப்பாய்வு நிலுவையில்",
     moreInformation: "மேலும் தகவல்",
     identityVerified: "அடையாளம் சரிபார்க்கப்பட்டது",
     rejected: "நிராகரிக்கப்பட்டது",
 
-    verificationRequests:
-      "மருத்துவர் சரிபார்ப்பு கோரிக்கைகள்",
+    verificationRequests: "மருத்துவர் சரிபார்ப்பு கோரிக்கைகள்",
     verificationDescription:
       "மருத்துவரின் அடையாளச் சான்றுகளை மதிப்பாய்வு செய்து சரிபார்க்கவும்.",
 
@@ -321,8 +302,7 @@ const adminTranslations = {
     rejectedStatus: "நிராகரிக்கப்பட்டது",
 
     complete: "முழுமையானது",
-    additionalDocument:
-      "கூடுதல் ஆவணம் கோரப்பட்டுள்ளது",
+    additionalDocument: "கூடுதல் ஆவணம் கோரப்பட்டுள்ளது",
   },
 };
 
@@ -427,6 +407,9 @@ export default function AdminDashboard() {
   const [activeFilter, setActiveFilter] =
     useState("All");
 
+  const [searchQuery, setSearchQuery] =
+    useState("");
+
   useEffect(() => {
     localStorage.setItem(
       STORAGE_KEY,
@@ -434,13 +417,30 @@ export default function AdminDashboard() {
     );
   }, [doctorRequests]);
 
-  const filteredDoctors =
-    activeFilter === "All"
-      ? doctorRequests
-      : doctorRequests.filter(
-          (doctor) =>
-            doctor.status === activeFilter
-        );
+  const filteredDoctors = doctorRequests.filter(
+    (doctor) => {
+      const matchesFilter =
+        activeFilter === "All" ||
+        doctor.status === activeFilter;
+
+      const query =
+        searchQuery.trim().toLowerCase();
+
+      const matchesSearch =
+        query === "" ||
+        doctor.name
+          ?.toLowerCase()
+          .includes(query) ||
+        doctor.registrationNo
+          ?.toLowerCase()
+          .includes(query) ||
+        doctor.specialization
+          ?.toLowerCase()
+          .includes(query);
+
+      return matchesFilter && matchesSearch;
+    }
+  );
 
   const pendingCount =
     doctorRequests.filter(
@@ -532,8 +532,7 @@ export default function AdminDashboard() {
             <p
               style={{
                 margin: 0,
-                color:
-                  "var(--jc-text-secondary)",
+                color: "var(--jc-text-secondary)",
                 fontSize: "14px",
               }}
             >
@@ -580,14 +579,12 @@ export default function AdminDashboard() {
 
         <div
           style={{
-            background:
-              "var(--jc-panel)",
+            background: "var(--jc-panel)",
             border:
               "1px solid var(--jc-border)",
             borderRadius: "14px",
             padding: "20px",
-            boxShadow:
-              "var(--jc-shadow)",
+            boxShadow: "var(--jc-shadow)",
           }}
         >
           <div
@@ -600,8 +597,7 @@ export default function AdminDashboard() {
             <div>
               <div
                 style={{
-                  color:
-                    "var(--jc-muted)",
+                  color: "var(--jc-muted)",
                   fontSize: "13px",
                   marginBottom: "8px",
                 }}
@@ -611,8 +607,7 @@ export default function AdminDashboard() {
 
               <div
                 style={{
-                  color:
-                    "var(--jc-text)",
+                  color: "var(--jc-text)",
                   fontSize: "28px",
                   fontWeight: 700,
                 }}
@@ -635,14 +630,12 @@ export default function AdminDashboard() {
 
         <div
           style={{
-            background:
-              "var(--jc-panel)",
+            background: "var(--jc-panel)",
             border:
               "1px solid var(--jc-border)",
             borderRadius: "14px",
             padding: "20px",
-            boxShadow:
-              "var(--jc-shadow)",
+            boxShadow: "var(--jc-shadow)",
           }}
         >
           <div
@@ -655,8 +648,7 @@ export default function AdminDashboard() {
             <div>
               <div
                 style={{
-                  color:
-                    "var(--jc-muted)",
+                  color: "var(--jc-muted)",
                   fontSize: "13px",
                   marginBottom: "8px",
                 }}
@@ -666,8 +658,7 @@ export default function AdminDashboard() {
 
               <div
                 style={{
-                  color:
-                    "var(--jc-text)",
+                  color: "var(--jc-text)",
                   fontSize: "28px",
                   fontWeight: 700,
                 }}
@@ -690,14 +681,12 @@ export default function AdminDashboard() {
 
         <div
           style={{
-            background:
-              "var(--jc-panel)",
+            background: "var(--jc-panel)",
             border:
               "1px solid var(--jc-border)",
             borderRadius: "14px",
             padding: "20px",
-            boxShadow:
-              "var(--jc-shadow)",
+            boxShadow: "var(--jc-shadow)",
           }}
         >
           <div
@@ -710,8 +699,7 @@ export default function AdminDashboard() {
             <div>
               <div
                 style={{
-                  color:
-                    "var(--jc-muted)",
+                  color: "var(--jc-muted)",
                   fontSize: "13px",
                   marginBottom: "8px",
                 }}
@@ -721,8 +709,7 @@ export default function AdminDashboard() {
 
               <div
                 style={{
-                  color:
-                    "var(--jc-text)",
+                  color: "var(--jc-text)",
                   fontSize: "28px",
                   fontWeight: 700,
                 }}
@@ -735,8 +722,7 @@ export default function AdminDashboard() {
               className="bi bi-patch-check"
               style={{
                 fontSize: "24px",
-                color:
-                  "var(--jc-green)",
+                color: "var(--jc-green)",
               }}
             ></i>
           </div>
@@ -746,14 +732,12 @@ export default function AdminDashboard() {
 
         <div
           style={{
-            background:
-              "var(--jc-panel)",
+            background: "var(--jc-panel)",
             border:
               "1px solid var(--jc-border)",
             borderRadius: "14px",
             padding: "20px",
-            boxShadow:
-              "var(--jc-shadow)",
+            boxShadow: "var(--jc-shadow)",
           }}
         >
           <div
@@ -766,8 +750,7 @@ export default function AdminDashboard() {
             <div>
               <div
                 style={{
-                  color:
-                    "var(--jc-muted)",
+                  color: "var(--jc-muted)",
                   fontSize: "13px",
                   marginBottom: "8px",
                 }}
@@ -777,8 +760,7 @@ export default function AdminDashboard() {
 
               <div
                 style={{
-                  color:
-                    "var(--jc-text)",
+                  color: "var(--jc-text)",
                   fontSize: "28px",
                   fontWeight: 700,
                 }}
@@ -804,13 +786,11 @@ export default function AdminDashboard() {
 
       <div
         style={{
-          background:
-            "var(--jc-panel)",
+          background: "var(--jc-panel)",
           border:
             "1px solid var(--jc-border)",
           borderRadius: "16px",
-          boxShadow:
-            "var(--jc-shadow)",
+          boxShadow: "var(--jc-shadow)",
           overflow: "hidden",
         }}
       >
@@ -836,8 +816,7 @@ export default function AdminDashboard() {
               <h2
                 style={{
                   margin: 0,
-                  color:
-                    "var(--jc-text)",
+                  color: "var(--jc-text)",
                   fontSize: "19px",
                   fontWeight: 650,
                 }}
@@ -848,8 +827,7 @@ export default function AdminDashboard() {
               <p
                 style={{
                   margin: "6px 0 0",
-                  color:
-                    "var(--jc-muted)",
+                  color: "var(--jc-muted)",
                   fontSize: "13px",
                 }}
               >
@@ -857,57 +835,116 @@ export default function AdminDashboard() {
               </p>
             </div>
 
-            {/* Filters */}
+            {/* Search + Filters */}
 
             <div
               style={{
                 display: "flex",
-                gap: "6px",
+                alignItems: "center",
+                gap: "8px",
                 flexWrap: "wrap",
               }}
             >
-              {[
-                "All",
-                "Pending Review",
-                "More Information",
-                "Verified",
-                "Rejected",
-              ].map((filter) => (
-                <button
-                  key={filter}
-                  type="button"
-                  onClick={() =>
-                    setActiveFilter(filter)
-                  }
+              {/* Search */}
+
+              <div
+                style={{
+                  position: "relative",
+                  width: "220px",
+                }}
+              >
+                <i
+                  className="bi bi-search"
                   style={{
-                    border:
-                      activeFilter === filter
-                        ? "1px solid #2563eb"
-                        : "1px solid var(--jc-border)",
-                    background:
-                      activeFilter === filter
-                        ? "rgba(37, 99, 235, 0.10)"
-                        : "var(--jc-panel)",
-                    color:
-                      activeFilter === filter
-                        ? "#2563eb"
-                        : "var(--jc-text-secondary)",
-                    borderRadius: "8px",
-                    padding: "7px 11px",
-                    fontSize: "12px",
-                    cursor: "pointer",
-                    fontWeight:
-                      activeFilter === filter
-                        ? 600
-                        : 500,
+                    position: "absolute",
+                    left: "11px",
+                    top: "50%",
+                    transform:
+                      "translateY(-50%)",
+                    color: "var(--jc-muted)",
+                    fontSize: "13px",
+                    pointerEvents: "none",
                   }}
-                >
-                  {translateFilter(
-                    filter,
-                    t
-                  )}
-                </button>
-              ))}
+                ></i>
+
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) =>
+                    setSearchQuery(
+                      e.target.value
+                    )
+                  }
+                  placeholder="Search doctors..."
+                  style={{
+                    width: "100%",
+                    boxSizing: "border-box",
+                    border:
+                      "1px solid var(--jc-border)",
+                    background:
+                      "var(--jc-panel)",
+                    color: "var(--jc-text)",
+                    borderRadius: "8px",
+                    padding:
+                      "8px 11px 8px 32px",
+                    fontSize: "12px",
+                    outline: "none",
+                  }}
+                />
+              </div>
+
+              {/* Filters */}
+
+              <div
+                style={{
+                  display: "flex",
+                  gap: "6px",
+                  flexWrap: "wrap",
+                }}
+              >
+                {[
+                  "All",
+                  "Pending Review",
+                  "More Information",
+                  "Verified",
+                  "Rejected",
+                ].map((filter) => (
+                  <button
+                    key={filter}
+                    type="button"
+                    onClick={() =>
+                      setActiveFilter(filter)
+                    }
+                    style={{
+                      border:
+                        activeFilter === filter
+                          ? "1px solid #2563eb"
+                          : "1px solid var(--jc-border)",
+                      background:
+                        activeFilter === filter
+                          ? "rgba(37, 99, 235, 0.10)"
+                          : "var(--jc-panel)",
+                      color:
+                        activeFilter === filter
+                          ? "#2563eb"
+                          : "var(--jc-text-secondary)",
+                      borderRadius: "8px",
+                      padding: "7px 11px",
+                      fontSize: "12px",
+                      cursor: "pointer",
+                      fontWeight:
+                        activeFilter === filter
+                          ? 600
+                          : 500,
+                    }}
+                  >
+                    {translateFilter(
+                      filter,
+                      t
+                    )}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -924,8 +961,7 @@ export default function AdminDashboard() {
           <table
             style={{
               width: "100%",
-              borderCollapse:
-                "collapse",
+              borderCollapse: "collapse",
               minWidth: "900px",
             }}
           >
@@ -959,8 +995,7 @@ export default function AdminDashboard() {
                 <th
                   style={{
                     ...headerStyle,
-                    textAlign:
-                      "right",
+                    textAlign: "right",
                   }}
                 >
                   {t.review}
@@ -969,187 +1004,143 @@ export default function AdminDashboard() {
             </thead>
 
             <tbody>
-              {filteredDoctors.length ===
-              0 ? (
+              {filteredDoctors.length === 0 ? (
                 <tr>
                   <td
                     colSpan="6"
                     style={{
-                      padding:
-                        "45px 20px",
-                      textAlign:
-                        "center",
-                      color:
-                        "var(--jc-muted)",
+                      padding: "45px 20px",
+                      textAlign: "center",
+                      color: "var(--jc-muted)",
                     }}
                   >
                     {t.noRequests}
                   </td>
                 </tr>
               ) : (
-                filteredDoctors.map(
-                  (doctor) => (
-                    <tr
-                      key={doctor.id}
-                      style={{
-                        borderTop:
-                          "1px solid var(--jc-border)",
-                      }}
-                    >
-                      <td
-                        style={
-                          cellStyle
-                        }
+                filteredDoctors.map((doctor) => (
+                  <tr
+                    key={doctor.id}
+                    style={{
+                      borderTop:
+                        "1px solid var(--jc-border)",
+                    }}
+                  >
+                    <td style={cellStyle}>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "11px",
+                        }}
                       >
                         <div
                           style={{
-                            display:
-                              "flex",
-                            alignItems:
+                            width: "36px",
+                            height: "36px",
+                            borderRadius: "10px",
+                            background:
+                              "rgba(37, 99, 235, 0.10)",
+                            color: "#2563eb",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent:
                               "center",
-                            gap: "11px",
+                            flexShrink: 0,
                           }}
                         >
+                          <i className="bi bi-person"></i>
+                        </div>
+
+                        <div>
                           <div
                             style={{
-                              width: "36px",
-                              height: "36px",
-                              borderRadius:
-                                "10px",
-                              background:
-                                "rgba(37, 99, 235, 0.10)",
                               color:
-                                "#2563eb",
-                              display:
-                                "flex",
-                              alignItems:
-                                "center",
-                              justifyContent:
-                                "center",
-                              flexShrink: 0,
+                                "var(--jc-text)",
+                              fontWeight: 600,
+                              fontSize: "13px",
                             }}
                           >
-                            <i className="bi bi-person"></i>
+                            {doctor.name}
                           </div>
 
-                          <div>
-                            <div
-                              style={{
-                                color:
-                                  "var(--jc-text)",
-                                fontWeight:
-                                  600,
-                                fontSize:
-                                  "13px",
-                              }}
-                            >
-                              {doctor.name}
-                            </div>
-
-                            <div
-                              style={{
-                                color:
-                                  "var(--jc-muted)",
-                                fontSize:
-                                  "11px",
-                                marginTop:
-                                  "2px",
-                              }}
-                            >
-                              {doctor.id}
-                            </div>
+                          <div
+                            style={{
+                              color:
+                                "var(--jc-muted)",
+                              fontSize: "11px",
+                              marginTop: "2px",
+                            }}
+                          >
+                            {doctor.id}
                           </div>
                         </div>
-                      </td>
+                      </div>
+                    </td>
 
-                      <td
-                        style={
-                          cellStyle
-                        }
+                    <td style={cellStyle}>
+                      {doctor.registrationNo}
+                    </td>
+
+                    <td style={cellStyle}>
+                      {doctor.specialization}
+                    </td>
+
+                    <td style={cellStyle}>
+                      {doctor.submittedDate}
+                    </td>
+
+                    <td style={cellStyle}>
+                      <span
+                        className={getStatusClass(
+                          doctor.status
+                        )}
                       >
-                        {doctor.registrationNo}
-                      </td>
+                        {translateStatus(
+                          doctor.status,
+                          t
+                        )}
+                      </span>
+                    </td>
 
-                      <td
-                        style={
-                          cellStyle
+                    <td
+                      style={{
+                        ...cellStyle,
+                        textAlign: "right",
+                      }}
+                    >
+                      <button
+                        type="button"
+                        onClick={() =>
+                          navigate(
+                            `/admin/doctor-verification/${doctor.id}`
+                          )
                         }
-                      >
-                        {doctor.specialization}
-                      </td>
-
-                      <td
-                        style={
-                          cellStyle
-                        }
-                      >
-                        {doctor.submittedDate}
-                      </td>
-
-                      <td
-                        style={
-                          cellStyle
-                        }
-                      >
-                        <span
-                          className={getStatusClass(
-                            doctor.status
-                          )}
-                        >
-                          {translateStatus(
-                            doctor.status,
-                            t
-                          )}
-                        </span>
-                      </td>
-
-                      <td
                         style={{
-                          ...cellStyle,
-                          textAlign:
-                            "right",
+                          border:
+                            "1px solid var(--jc-border)",
+                          background:
+                            "var(--jc-panel)",
+                          color: "#2563eb",
+                          borderRadius: "8px",
+                          padding: "8px 13px",
+                          fontSize: "12px",
+                          fontWeight: 600,
+                          cursor: "pointer",
                         }}
                       >
-                        <button
-                          type="button"
-                          onClick={() =>
-                            navigate(
-                              `/admin/doctor-verification/${doctor.id}`
-                            )
-                          }
+                        <i
+                          className="bi bi-eye"
                           style={{
-                            border:
-                              "1px solid var(--jc-border)",
-                            background:
-                              "var(--jc-panel)",
-                            color:
-                              "#2563eb",
-                            borderRadius:
-                              "8px",
-                            padding:
-                              "8px 13px",
-                            fontSize:
-                              "12px",
-                            fontWeight:
-                              600,
-                            cursor:
-                              "pointer",
+                            marginRight: "6px",
                           }}
-                        >
-                          <i
-                            className="bi bi-eye"
-                            style={{
-                              marginRight:
-                                "6px",
-                            }}
-                          ></i>
+                        ></i>
 
-                          {t.review}
-                        </button>
-                      </td>
-                    </tr>
-                  )
-                )
+                        {t.review}
+                      </button>
+                    </td>
+                  </tr>
+                ))
               )}
             </tbody>
           </table>
@@ -1159,16 +1150,13 @@ export default function AdminDashboard() {
 
         <div
           style={{
-            padding:
-              "15px 24px",
+            padding: "15px 24px",
             borderTop:
               "1px solid var(--jc-border)",
-            color:
-              "var(--jc-muted)",
+            color: "var(--jc-muted)",
             fontSize: "12px",
             display: "flex",
-            alignItems:
-              "center",
+            alignItems: "center",
             gap: "8px",
           }}
         >

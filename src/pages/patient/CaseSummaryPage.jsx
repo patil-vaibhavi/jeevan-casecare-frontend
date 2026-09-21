@@ -852,12 +852,11 @@ export default function CaseSummaryPage() {
 
   const temperature =
     getTemperature(allPatientText);
+const aggravatingFactor =
+  getAggravatingFactor(patientTexts);
 
-  const aggravatingFactor =
-    getAggravatingFactor(allPatientText);
-
-  const relievingFactor =
-    getRelievingFactor(allPatientText);
+const relievingFactor =
+  getRelievingFactor(patientTexts);
 
   const associatedSymptoms =
     getAssociatedSymptoms(
@@ -1724,113 +1723,150 @@ function getTemperature(text) {
   return "";
 }
 
-function getAggravatingFactor(text) {
-  const cleanText =
-    typeof text === "string"
-      ? text.trim()
-      : "";
-
-  if (!cleanText) {
+function getAggravatingFactor(patientTexts) {
+  if (!Array.isArray(patientTexts) || patientTexts.length === 0) {
     return "Not recorded";
   }
 
-  const patterns = [
-    /\bworse\s+(?:with|after|when)\s+([^,.!?]+)/i,
-    /\bworsens\s+(?:with|after|when)\s+([^,.!?]+)/i,
-    /\baggravated\s+(?:by|with|after)\s+([^,.!?]+)/i,
-    /\baggravating\s+factor\s*(?:is|:)?\s*([^,.!?]+)/i,
-    /\bgets\s+worse\s+(?:with|after|when)\s+([^,.!?]+)/i,
-    /\bincreases\s+(?:with|after|when)\s+([^,.!?]+)/i,
-  ];
+  for (const text of patientTexts) {
+    if (typeof text !== "string") continue;
 
-  for (
-    let index = 0;
-    index < patterns.length;
-    index += 1
-  ) {
-    const match =
-      cleanText.match(patterns[index]);
+    const cleanText = text
+      .trim()
+      .replace(/[.!?]+$/, "");
+
+    if (!cleanText) continue;
+
+    // Example:
+    // "it gets worse after eating" -> "eating"
+    let match = cleanText.match(
+      /\bgets\s+worse\s+(?:after|with|when)\s+(.+)$/i
+    );
+
+    if (match && match[1]) {
+      return cleanFactor(match[1]);
+    }
+
+    // Example:
+    // "it worsens after eating" -> "eating"
+    match = cleanText.match(
+      /\bworsens\s+(?:after|with|when)\s+(.+)$/i
+    );
+
+    if (match && match[1]) {
+      return cleanFactor(match[1]);
+    }
+
+    // Example:
+    // "worse after eating" -> "eating"
+    match = cleanText.match(
+      /\bworse\s+(?:after|with|when)\s+(.+)$/i
+    );
+
+    if (match && match[1]) {
+      return cleanFactor(match[1]);
+    }
+
+    // Example:
+    // "pain is aggravated by eating" -> "eating"
+    match = cleanText.match(
+      /\baggravated\s+(?:by|with|after)\s+(.+)$/i
+    );
+
+    if (match && match[1]) {
+      return cleanFactor(match[1]);
+    }
+
+    // Example:
+    // "eating makes it worse" -> "eating"
+    match = cleanText.match(
+      /^(.+?)\s+makes\s+(?:it|the pain|the problem|the symptom)\s+worse$/i
+    );
 
     if (match && match[1]) {
       return cleanFactor(match[1]);
     }
   }
 
-  if (
-    /\b(?:worse|worsens|aggravated|increases)\b[\s\S]*\beating\b/i.test(
-      cleanText
-    )
-  ) {
-    return "eating";
-  }
-
   return "Not recorded";
 }
-
-function getRelievingFactor(text) {
-  const cleanText =
-    typeof text === "string"
-      ? text.trim()
-      : "";
-
-  if (!cleanText) {
+function getRelievingFactor(patientTexts) {
+  if (!Array.isArray(patientTexts) || patientTexts.length === 0) {
     return "Not recorded";
   }
 
-  const patterns = [
-    /\bbetter\s+(?:with|after|when)\s+([^,.!?]+)/i,
+  for (const text of patientTexts) {
+    if (typeof text !== "string") continue;
 
-    /\bimproves\s+(?:with|after|when)\s+([^,.!?]+)/i,
+    const cleanText = text
+      .trim()
+      .replace(/[.!?]+$/, "");
 
-    /\bimproved\s+(?:with|after|when)\s+([^,.!?]+)/i,
+    if (!cleanText) continue;
 
-    /\brelieved\s+(?:by|with)\s+([^,.!?]+)/i,
-
-    /\brelieving\s+factor\s*(?:is|:)?\s*([^,.!?]+)/i,
-
-    /\bdecreases\s+(?:with|after|when)\s+([^,.!?]+)/i,
-
-    /\bgets\s+better\s+(?:with|after|when)\s+([^,.!?]+)/i,
-
-    /\b([a-zA-Z]+ing)\s+makes\s+(?:it|the\s+(?:pain|problem|symptom))\s+better\b/i,
-
-    /\b(rest|resting)\s+makes\s+(?:it|the\s+(?:pain|problem|symptom))\s+better\b/i,
-  ];
-
-  for (
-    let index = 0;
-    index < patterns.length;
-    index += 1
-  ) {
-    const match =
-      cleanText.match(patterns[index]);
+    // Example:
+    // "after resting i feel better" -> "Resting"
+    let match = cleanText.match(
+      /^after\s+(.+?)\s+i\s+feel\s+better$/i
+    );
 
     if (match && match[1]) {
-      const cleaned =
-        cleanFactor(match[1]);
-
-      if (
-        /^rest$/i.test(cleaned) ||
-        /^resting$/i.test(cleaned)
-      ) {
-        return "Resting";
-      }
-
-      return cleaned;
+      return normalizeRelievingFactor(match[1]);
     }
-  }
 
-  if (
-    /\b(?:better|improves|improved|relieved|decreases)\b[\s\S]*\b(?:rest|resting)\b/i.test(
-      cleanText
-    )
-  ) {
-    return "Resting";
+    // Example:
+    // "i feel better after resting" -> "Resting"
+    match = cleanText.match(
+      /^i\s+feel\s+better\s+(?:after|with|when)\s+(.+)$/i
+    );
+
+    if (match && match[1]) {
+      return normalizeRelievingFactor(match[1]);
+    }
+
+    // Example:
+    // "it gets better after resting" -> "Resting"
+    match = cleanText.match(
+      /\bgets\s+better\s+(?:after|with|when)\s+(.+)$/i
+    );
+
+    if (match && match[1]) {
+      return normalizeRelievingFactor(match[1]);
+    }
+
+    // Example:
+    // "it improves after resting" -> "Resting"
+    match = cleanText.match(
+      /\bimproves\s+(?:after|with|when)\s+(.+)$/i
+    );
+
+    if (match && match[1]) {
+      return normalizeRelievingFactor(match[1]);
+    }
+
+    // Example:
+    // "resting makes it better" -> "Resting"
+    match = cleanText.match(
+      /^(.+?)\s+makes\s+(?:it|the pain|the problem|the symptom)\s+better$/i
+    );
+
+    if (match && match[1]) {
+      return normalizeRelievingFactor(match[1]);
+    }
   }
 
   return "Not recorded";
 }
 
+function normalizeRelievingFactor(value) {
+  const cleaned = cleanFactor(value);
+
+  if (/^rest$/i.test(cleaned) || /^resting$/i.test(cleaned)) {
+    return "Resting";
+  }
+
+  return cleaned;
+}
 function getAssociatedSymptoms(
   text,
   patientTexts

@@ -846,9 +846,6 @@ export default function EmergencyDashboard() {
   const [accessTime, setAccessTime] = useState(null);
   const [message, setMessage] = useState("");
   const [auditLog, setAuditLog] = useState([]);
-  const [caseData, setCaseData] = useState(null);
-
-  const [scannerOpen, setScannerOpen] = useState(false);
   const [scannerError, setScannerError] = useState("");
 
   const videoRef = useRef(null);

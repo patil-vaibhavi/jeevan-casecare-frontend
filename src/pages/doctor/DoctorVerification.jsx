@@ -787,70 +787,72 @@ export default function DoctorVerification() {
   }, [allPatientText, t]);
 
   const aggravatingFactor = useMemo(() => {
-    for (const text of patientTexts) {
-      const cleanedText = text
-        .trim()
-        .replace(/[.!?]+$/, "");
+  for (const text of patientTexts) {
+    const cleanedText = text
+      .trim()
+      .replace(/[.!?]+$/, "");
 
-      const match = cleanedText.match(
-        /^after\s+(.+)$/i
+    const match = cleanedText.match(
+      /^(?:it\s+gets?\s+worse|it\s+worsens|worse)\s+(?:after|with|when)\s+(.+)$/i
+    );
+
+    if (match) {
+      return (
+        match[1].trim().charAt(0).toUpperCase() +
+        match[1].trim().slice(1)
       );
-
-      if (match) {
-        return match[1].trim();
-      }
     }
 
-    return t.notRecorded;
-  }, [patientTexts, t]);
+    const afterMatch = cleanedText.match(
+      /^after\s+(.+)$/i
+    );
 
-  const relievingFactor = useMemo(() => {
-    for (const text of patientTexts) {
-      const cleanedText = text
-        .trim()
-        .replace(/[.!?]+$/, "");
+    if (afterMatch) {
+      return (
+        afterMatch[1].trim().charAt(0).toUpperCase() +
+        afterMatch[1].trim().slice(1)
+      );
+    }
+  }
 
-      const feelBetterMatch =
-        cleanedText.match(
-          /^i\s+feel\s+better\s+(?:after|when|with)\s+(.+)$/i
-        );
+  return t.notRecorded;
+}, [patientTexts, t]);
 
-      if (feelBetterMatch) {
-        const value =
-          feelBetterMatch[1].trim();
+const relievingFactor = useMemo(() => {
+  for (const text of patientTexts) {
+    const cleanedText = text
+      .trim()
+      .replace(/[.!?]+$/, "");
 
-        if (/^resting$/i.test(value)) {
-          return "Resting";
-        }
+    const betterAfterMatch = cleanedText.match(
+      /^after\s+(.+?)\s+i\s+feel\s+better$/i
+    );
 
-        return (
-          value.charAt(0).toUpperCase() +
-          value.slice(1)
-        );
-      }
+    if (betterAfterMatch) {
+      const value = betterAfterMatch[1].trim();
 
-      const getsBetterMatch =
-        cleanedText.match(
-          /gets?\s+better\s+(?:after|when|with)\s+(.+)$/i
-        );
-
-      if (getsBetterMatch) {
-        const value =
-          getsBetterMatch[1].trim();
-
-        if (/^resting$/i.test(value)) {
-          return "Resting";
-        }
-
-        return (
-          value.charAt(0).toUpperCase() +
-          value.slice(1)
-        );
-      }
+      return (
+        value.charAt(0).toUpperCase() +
+        value.slice(1)
+      );
     }
 
-    return t.notRecorded;
-  }, [patientTexts, t]);
+    const feelBetterMatch = cleanedText.match(
+      /^i\s+feel\s+better\s+(?:after|when|with)\s+(.+)$/i
+    );
+
+    if (feelBetterMatch) {
+      const value = feelBetterMatch[1].trim();
+
+      return (
+        value.charAt(0).toUpperCase() +
+        value.slice(1)
+      );
+    }
+  }
+
+  return t.notRecorded;
+}, [patientTexts, t]);
 
   const associatedSymptoms = useMemo(() => {
     for (const text of patientTexts) {
