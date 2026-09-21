@@ -1,0 +1,1384 @@
+/* =========================================================
+   JEEVAN CASECARE
+   GLOBAL STYLES + DARK / LIGHT THEME
+   ========================================================= */
+
+
+/* =========================================================
+   DARK MODE — EXISTING COLOR SCHEME
+   ========================================================= */
+
+:root {
+  --jc-bg: #f4f7fb;
+  --jc-panel: #ffffff;
+  --jc-panel-elevated: #f8fafc;
+  --jc-border: #dbe3ee;
+
+  --jc-cyan: #0891b2;
+  --jc-green: #16a34a;
+  --jc-red: #e11d48;
+  --jc-yellow: #d97706;
+
+  --jc-text: #0f172a;
+  --jc-text-secondary: #334155;
+  --jc-muted: #475569;
+  --jc-subtle: #64748b;
+
+  --jc-input-bg: #ffffff;
+
+  --jc-sidebar-bg: #ffffff;
+  --jc-topbar-bg: rgba(255, 255, 255, 0.96);
+
+  --jc-hover-bg: rgba(8, 145, 178, 0.07);
+
+  --jc-card-gradient-start: #ffffff;
+  --jc-card-gradient-end: #f8fafc;
+
+  --jc-shadow: rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================================================
+   LIGHT MODE
+   ========================================================= */
+
+html[data-theme="light"] {
+  --jc-bg: #f4f7fb;
+  --jc-panel: #ffffff;
+  --jc-panel-elevated: #f8fafc;
+  --jc-border: #dbe3ee;
+
+  --jc-cyan: #0891b2;
+  --jc-green: #16a34a;
+  --jc-red: #e11d48;
+  --jc-yellow: #d97706;
+
+  /* Stronger text contrast */
+  --jc-text: #0f172a;
+  --jc-text-secondary: #334155;
+  --jc-muted: #475569;
+  --jc-subtle: #64748b;
+
+  --jc-input-bg: #ffffff;
+
+  --jc-sidebar-bg: #ffffff;
+  --jc-topbar-bg: rgba(255, 255, 255, 0.96);
+
+  --jc-hover-bg: rgba(8, 145, 178, 0.07);
+
+  --jc-card-gradient-start: #ffffff;
+  --jc-card-gradient-end: #f8fafc;
+
+  --jc-shadow: rgba(15, 23, 42, 0.07);
+}
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+/* =========================================================
+   JEEVAN CASECARE
+   GLOBAL STYLES + DARK / LIGHT THEME
+   ========================================================= */
+
+
+/* =========================================================
+   DEFAULT / LIGHT THEME
+   ========================================================= */
+
+:root {
+  --jc-bg: #f4f7fb;
+  --jc-panel: #ffffff;
+  --jc-panel-elevated: #f8fafc;
+  --jc-border: #dbe3ee;
+
+  --jc-cyan: #0891b2;
+  --jc-green: #16a34a;
+  --jc-red: #e11d48;
+  --jc-yellow: #d97706;
+
+  --jc-text: #0f172a;
+  --jc-text-secondary: #334155;
+  --jc-muted: #475569;
+  --jc-subtle: #64748b;
+
+  --jc-input-bg: #ffffff;
+
+  --jc-sidebar-bg: #ffffff;
+  --jc-topbar-bg: rgba(255, 255, 255, 0.96);
+
+  --jc-hover-bg: rgba(8, 145, 178, 0.07);
+
+  --jc-card-gradient-start: #ffffff;
+  --jc-card-gradient-end: #f8fafc;
+
+  --jc-shadow: rgba(15, 23, 42, 0.07);
+
+
+  /* =======================================================
+     PUBLIC PAGES — LIGHT
+     ======================================================= */
+
+  --jc-public-bg:
+    linear-gradient(
+      135deg,
+      #f5fcfd 0%,
+      #eef9fb 48%,
+      #f8fcfd 100%
+    );
+
+  --jc-public-text: #12304a;
+  --jc-public-heading: #12304a;
+  --jc-public-muted: #648096;
+  --jc-public-soft: #486579;
+  --jc-public-label: #8aa0af;
+
+  --jc-public-card: rgba(255, 255, 255, 0.94);
+  --jc-public-card-solid: #ffffff;
+
+  --jc-public-border: #d9e7eb;
+
+  --jc-public-chip-bg: rgba(255, 255, 255, 0.88);
+  --jc-public-chip-border: #dcecf0;
+
+  --jc-public-input-bg: #ffffff;
+  --jc-public-input-border: #d9e7eb;
+  --jc-public-input-text: #294b5e;
+
+  --jc-public-secondary-bg: #ffffff;
+  --jc-public-secondary-text: #12304a;
+
+  --jc-public-visual-bg:
+    linear-gradient(
+      145deg,
+      #dff6f8 0%,
+      #edfafa 45%,
+      #d8f1f0 100%
+    );
+
+  --jc-public-visual-card: rgba(255, 255, 255, 0.94);
+
+  --jc-public-shadow: rgba(23, 74, 92, 0.08);
+  --jc-public-shadow-hover: rgba(23, 74, 92, 0.13);
+  --jc-public-shadow-light: rgba(23, 74, 92, 0.045);
+
+  --jc-public-line: #c6e4e9;
+  --jc-public-line-soft: #dcecf0;
+
+  --jc-public-figure-bg:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #eef9fb 100%
+    );
+
+  --jc-public-figure-body:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #e8f6f8 100%
+    );
+
+  --jc-public-role-bg: #ffffff;
+  --jc-public-role-border: #d9e7eb;
+  --jc-public-role-text: #6e8492;
+
+  --jc-public-disabled-card: rgba(255, 255, 255, 0.72);
+  --jc-public-disabled-border: rgba(100, 116, 139, 0.16);
+
+  --jc-public-trust-bg: rgba(255, 255, 255, 0.72);
+
+  --jc-public-separator: #b1c0ca;
+}
+
+
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+html[data-theme="light"] {
+  --jc-bg: #f4f7fb;
+  --jc-panel: #ffffff;
+  --jc-panel-elevated: #f8fafc;
+  --jc-border: #dbe3ee;
+
+  --jc-cyan: #0891b2;
+  --jc-green: #16a34a;
+  --jc-red: #e11d48;
+  --jc-yellow: #d97706;
+
+  --jc-text: #0f172a;
+  --jc-text-secondary: #334155;
+  --jc-muted: #475569;
+  --jc-subtle: #64748b;
+
+  --jc-input-bg: #ffffff;
+
+  --jc-sidebar-bg: #ffffff;
+  --jc-topbar-bg: rgba(255, 255, 255, 0.96);
+
+  --jc-hover-bg: rgba(8, 145, 178, 0.07);
+
+  --jc-card-gradient-start: #ffffff;
+  --jc-card-gradient-end: #f8fafc;
+
+  --jc-shadow: rgba(15, 23, 42, 0.07);
+
+
+  /* =======================================================
+     PUBLIC PAGES — LIGHT
+     ======================================================= */
+
+  --jc-public-bg:
+    linear-gradient(
+      135deg,
+      #f5fcfd 0%,
+      #eef9fb 48%,
+      #f8fcfd 100%
+    );
+
+  --jc-public-text: #12304a;
+  --jc-public-heading: #12304a;
+  --jc-public-muted: #648096;
+  --jc-public-soft: #486579;
+  --jc-public-label: #8aa0af;
+
+  --jc-public-card: rgba(255, 255, 255, 0.94);
+  --jc-public-card-solid: #ffffff;
+
+  --jc-public-border: #d9e7eb;
+
+  --jc-public-chip-bg: rgba(255, 255, 255, 0.88);
+  --jc-public-chip-border: #dcecf0;
+
+  --jc-public-input-bg: #ffffff;
+  --jc-public-input-border: #d9e7eb;
+  --jc-public-input-text: #294b5e;
+
+  --jc-public-secondary-bg: #ffffff;
+  --jc-public-secondary-text: #12304a;
+
+  --jc-public-visual-bg:
+    linear-gradient(
+      145deg,
+      #dff6f8 0%,
+      #edfafa 45%,
+      #d8f1f0 100%
+    );
+
+  --jc-public-visual-card: rgba(255, 255, 255, 0.94);
+
+  --jc-public-shadow: rgba(23, 74, 92, 0.08);
+  --jc-public-shadow-hover: rgba(23, 74, 92, 0.13);
+  --jc-public-shadow-light: rgba(23, 74, 92, 0.045);
+
+  --jc-public-line: #c6e4e9;
+  --jc-public-line-soft: #dcecf0;
+
+  --jc-public-figure-bg:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #eef9fb 100%
+    );
+
+  --jc-public-figure-body:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #e8f6f8 100%
+    );
+
+  --jc-public-role-bg: #ffffff;
+  --jc-public-role-border: #d9e7eb;
+  --jc-public-role-text: #6e8492;
+
+  --jc-public-disabled-card: rgba(255, 255, 255, 0.72);
+  --jc-public-disabled-border: rgba(100, 116, 139, 0.16);
+
+  --jc-public-trust-bg: rgba(255, 255, 255, 0.72);
+
+  --jc-public-separator: #b1c0ca;
+}
+
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+html[data-theme="dark"] {
+  --jc-bg: #090d16;
+  --jc-panel: #111827;
+  --jc-panel-elevated: #1f2937;
+  --jc-border: #1e293b;
+
+  --jc-cyan: #06b6d4;
+  --jc-green: #22c55e;
+  --jc-red: #f43f5e;
+  --jc-yellow: #f59e0b;
+
+  --jc-text: #f8fafc;
+  --jc-text-secondary: #cbd5e1;
+  --jc-muted: #94a3b8;
+  --jc-subtle: #64748b;
+
+  --jc-input-bg: #111827;
+
+  --jc-sidebar-bg: #090d16;
+  --jc-topbar-bg: rgba(9, 13, 22, 0.96);
+
+  --jc-hover-bg: rgba(6, 182, 212, 0.06);
+
+  --jc-card-gradient-start: rgba(17, 24, 39, 0.98);
+  --jc-card-gradient-end: rgba(13, 20, 32, 0.98);
+
+  --jc-shadow: rgba(0, 0, 0, 0.25);
+
+
+  /* =======================================================
+     PUBLIC PAGES — DARK
+     ======================================================= */
+
+  --jc-public-bg:
+    linear-gradient(
+      135deg,
+      #090d16 0%,
+      #0f172a 50%,
+      #0b1f26 100%
+    );
+
+  --jc-public-text: #e8f1f5;
+  --jc-public-heading: #f8fafc;
+  --jc-public-muted: #a8b7c8;
+  --jc-public-soft: #cbd5e1;
+  --jc-public-label: #8fa4b5;
+
+  --jc-public-card: rgba(17, 24, 39, 0.94);
+  --jc-public-card-solid: #111827;
+
+  --jc-public-border: #2b3a4d;
+
+  --jc-public-chip-bg: rgba(31, 41, 55, 0.72);
+  --jc-public-chip-border: #334155;
+
+  --jc-public-input-bg: #111827;
+  --jc-public-input-border: #334155;
+  --jc-public-input-text: #f8fafc;
+
+  --jc-public-secondary-bg: #111827;
+  --jc-public-secondary-text: #e2e8f0;
+
+  --jc-public-visual-bg:
+    linear-gradient(
+      145deg,
+      #132d35 0%,
+      #172f34 45%,
+      #15312e 100%
+    );
+
+  --jc-public-visual-card: rgba(15, 23, 42, 0.94);
+
+  --jc-public-shadow: rgba(0, 0, 0, 0.30);
+  --jc-public-shadow-hover: rgba(0, 0, 0, 0.42);
+  --jc-public-shadow-light: rgba(0, 0, 0, 0.18);
+
+  --jc-public-line: #334155;
+  --jc-public-line-soft: #253449;
+
+  --jc-public-figure-bg:
+    linear-gradient(
+      180deg,
+      #1f2937 0%,
+      #172f34 100%
+    );
+
+  --jc-public-figure-body:
+    linear-gradient(
+      180deg,
+      #334155 0%,
+      #1e293b 100%
+    );
+
+  --jc-public-role-bg: #111827;
+  --jc-public-role-border: #334155;
+  --jc-public-role-text: #94a3b8;
+
+  --jc-public-disabled-card: rgba(17, 24, 39, 0.72);
+  --jc-public-disabled-border: rgba(100, 116, 139, 0.24);
+
+  --jc-public-trust-bg: rgba(17, 24, 39, 0.72);
+
+  --jc-public-separator: #475569;
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--jc-bg);
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+body {
+  background: var(--jc-bg);
+  color: var(--jc-text);
+
+  font-family:
+    Inter,
+    "Plus Jakarta Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--jc-bg);
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+body {
+  background: var(--jc-bg);
+  color: var(--jc-text);
+
+  font-family:
+    Inter,
+    "Plus Jakarta Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* =========================================================
+   APP SHELL
+   ========================================================= */
+
+.jc-app-shell {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+
+  background: var(--jc-bg);
+
+  overflow-x: hidden;
+}
+
+.jc-main {
+  flex: 1;
+
+  min-width: 0;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--jc-bg);
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.jc-sidebar {
+  width: 260px;
+  min-width: 260px;
+  height: 100vh;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--jc-sidebar-bg);
+
+  border-right: 1px solid var(--jc-border);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  z-index: 200;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   SIDEBAR BRAND
+   ========================================================= */
+
+.jc-sidebar-brand {
+  min-height: 96px;
+
+  padding: 20px 22px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  border-bottom: 1px solid var(--jc-border);
+}
+
+.jc-logo-mark {
+  width: 38px;
+  height: 38px;
+
+  min-width: 38px;
+
+  border-radius: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--jc-cyan);
+
+  background: rgba(6, 182, 212, 0.08);
+
+  border: 1px solid rgba(6, 182, 212, 0.45);
+
+  box-shadow:
+    0 0 20px rgba(6, 182, 212, 0.08);
+}
+
+.jc-logo-mark i {
+  font-size: 19px;
+}
+
+.jc-brand-text {
+  min-width: 0;
+}
+
+.jc-brand-name {
+  color: var(--jc-text);
+
+  font-size: 17px;
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  white-space: nowrap;
+}
+
+.jc-brand-name span {
+  color: var(--jc-text-secondary);
+}
+
+.jc-brand-subtitle {
+  margin-top: 5px;
+
+  max-width: 170px;
+
+  color: var(--jc-subtle);
+
+  font-size: 9px;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   SIDEBAR SECTION TITLE
+   ========================================================= */
+
+.jc-sidebar-section-title {
+  padding: 24px 27px 12px;
+
+  color: var(--jc-subtle);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.jc-sidebar-nav {
+  padding: 0 15px;
+}
+
+.jc-sidebar-link {
+  width: 100%;
+
+  min-height: 48px;
+
+  margin-bottom: 6px;
+
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  border-radius: 10px;
+
+  color: var(--jc-muted);
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.jc-sidebar-link:hover {
+  color: var(--jc-text);
+
+  background: var(--jc-hover-bg);
+
+  text-decoration: none;
+}
+
+.jc-sidebar-link.active {
+  color: var(--jc-cyan);
+
+  background: rgba(6, 182, 212, 0.13);
+
+  box-shadow:
+    inset 3px 0 0 var(--jc-cyan);
+}
+
+.jc-sidebar-icon {
+  width: 30px;
+  min-width: 30px;
+
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jc-sidebar-icon i {
+  font-size: 16px;
+}
+
+.jc-sidebar-label {
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+   ========================================================= */
+
+.jc-sidebar-bottom {
+  margin-top: auto;
+
+  padding: 18px 15px 16px;
+}
+
+
+/* =========================================================
+   SECURE WORKSPACE CARD
+   ========================================================= */
+
+.jc-secure-card {
+  min-height: 66px;
+
+  margin-bottom: 12px;
+
+  padding: 12px 14px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  border-radius: 11px;
+
+  background: rgba(6, 182, 212, 0.045);
+
+  border: 1px solid var(--jc-border);
+}
+
+.jc-secure-icon {
+  width: 30px;
+  min-width: 30px;
+
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  color: var(--jc-green);
+
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.jc-secure-icon i {
+  font-size: 14px;
+}
+
+.jc-secure-title {
+  color: var(--jc-text-secondary);
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.jc-secure-subtitle {
+  margin-top: 3px;
+
+  color: var(--jc-subtle);
+
+  font-size: 10px;
+}
+
+.jc-settings-link {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   SIDEBAR SCROLLBAR
+   ========================================================= */
+
+.jc-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.jc-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.jc-sidebar::-webkit-scrollbar-thumb {
+  background: var(--jc-border);
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   LIGHT MODE SIDEBAR
+   ========================================================= */
+
+html[data-theme="light"] .jc-sidebar {
+  box-shadow:
+    4px 0 20px rgba(15, 23, 42, 0.035);
+}
+
+html[data-theme="light"] .jc-sidebar-link {
+  color: #52627a;
+}
+
+html[data-theme="light"] .jc-sidebar-link:hover {
+  color: #0f172a;
+}
+
+html[data-theme="light"] .jc-sidebar-link.active {
+  color: #0891b2;
+
+  background: rgba(8, 145, 178, 0.09);
+
+  box-shadow:
+    inset 3px 0 0 #0891b2;
+}
+
+html[data-theme="light"] .jc-sidebar-section-title {
+  color: #64748b;
+}
+
+html[data-theme="light"] .jc-brand-subtitle {
+  color: #64748b;
+}
+
+html[data-theme="light"] .jc-secure-card {
+  background: #f8fafc;
+}
+
+html[data-theme="light"] .jc-secure-title {
+  color: #334155;
+}
+
+html[data-theme="light"] .jc-secure-subtitle {
+  color: #64748b;
+}
+
+
+/* =========================================================
+   TOPBAR
+   ========================================================= */
+
+.jc-topbar {
+  height: 76px;
+  min-height: 76px;
+
+  width: 100%;
+
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  background: var(--jc-topbar-bg);
+
+  border-bottom: 1px solid var(--jc-border);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+
+  backdrop-filter: blur(14px);
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.jc-search {
+  width: min(420px, 45%);
+
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 16px;
+
+  background: var(--jc-input-bg);
+
+  border: 1px solid var(--jc-border);
+
+  border-radius: 11px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.jc-search:focus-within {
+  border-color: var(--jc-cyan);
+
+  box-shadow:
+    0 0 0 3px rgba(6, 182, 212, 0.08);
+}
+
+.jc-search i {
+  color: var(--jc-subtle);
+
+  font-size: 17px;
+}
+
+.jc-search input {
+  width: 100%;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--jc-text);
+
+  font-size: 13px;
+}
+
+.jc-search input::placeholder {
+  color: var(--jc-subtle);
+}
+
+
+/* =========================================================
+   USER CHIP
+   ========================================================= */
+
+.jc-user-chip {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  min-width: 0;
+
+  cursor: pointer;
+}
+
+.jc-user-chip > div:nth-child(2) {
+  min-width: 0;
+}
+
+.jc-user-chip strong {
+  display: block;
+
+  color: var(--jc-text);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.jc-user-chip small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--jc-subtle);
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   AVATAR
+   ========================================================= */
+
+.jc-avatar {
+  width: 38px;
+  height: 38px;
+
+  min-width: 38px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #087b98;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   ICON BUTTON
+   ========================================================= */
+
+.jc-icon-btn {
+  width: 38px;
+  height: 38px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--jc-muted);
+
+  position: relative;
+
+  font-size: 19px;
+
+  border-radius: 9px;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.jc-icon-btn:hover {
+  background: var(--jc-hover-bg);
+
+  color: var(--jc-text);
+}
+
+.jc-icon-btn span {
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  background: var(--jc-red);
+
+  border-radius: 50%;
+
+  top: 6px;
+  right: 7px;
+}
+
+
+/* =========================================================
+   THEME TOGGLE
+   ========================================================= */
+
+.jc-theme-toggle {
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid var(--jc-border);
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--jc-panel);
+
+  color: var(--jc-muted);
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.jc-theme-toggle:hover {
+  color: var(--jc-cyan);
+
+  border-color: var(--jc-cyan);
+
+  background: var(--jc-hover-bg);
+
+  transform: translateY(-1px);
+}
+
+.jc-theme-toggle:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.jc-content {
+  flex: 1;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 36px 34px 48px;
+
+  overflow-x: hidden;
+
+  background: var(--jc-bg);
+}
+
+
+/* =========================================================
+   DASHBOARD CARD
+   ========================================================= */
+
+.jc-dashboard-card {
+  width: 100%;
+
+  padding: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--jc-card-gradient-start),
+      var(--jc-card-gradient-end)
+    );
+
+  border: 1px solid var(--jc-border);
+
+  border-radius: 14px;
+
+  color: var(--jc-text);
+
+  box-shadow:
+    0 8px 30px var(--jc-shadow);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+.jc-content h1,
+.jc-content h2,
+.jc-content h3,
+.jc-content h4,
+.jc-content h5,
+.jc-content h6 {
+  color: var(--jc-text);
+}
+
+.jc-content h1 {
+  font-size: clamp(30px, 3vw, 42px);
+
+  line-height: 1.15;
+}
+
+.jc-content h4 {
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   BOOTSTRAP OVERRIDES
+   ========================================================= */
+
+.jc-content .text-secondary {
+  color: var(--jc-muted) !important;
+}
+
+.jc-content .text-light {
+  color: var(--jc-text) !important;
+}
+
+.jc-content .text-white {
+  color: var(--jc-text) !important;
+}
+
+.jc-content .bg-dark {
+  background-color: var(--jc-panel-elevated) !important;
+}
+
+.jc-content .border-secondary,
+.jc-content .border-secondary-subtle {
+  border-color: var(--jc-border) !important;
+}
+
+.jc-content .btn-outline-light {
+  border-color: var(--jc-border);
+
+  color: var(--jc-text-secondary);
+
+  background: var(--jc-panel);
+}
+
+.jc-content .btn-outline-light:hover {
+  border-color: var(--jc-cyan);
+
+  color: var(--jc-text);
+
+  background: var(--jc-hover-bg);
+}
+
+.jc-content .btn-outline-secondary {
+  border-color: var(--jc-border);
+
+  color: var(--jc-text-secondary);
+}
+
+.jc-content .btn-outline-secondary:hover {
+  border-color: var(--jc-cyan);
+
+  color: var(--jc-text);
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+.form-control,
+.form-select {
+  background-color: var(--jc-input-bg) !important;
+
+  border-color: var(--jc-border) !important;
+
+  color: var(--jc-text) !important;
+}
+
+.form-control::placeholder {
+  color: var(--jc-subtle) !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--jc-input-bg) !important;
+
+  border-color: var(--jc-cyan) !important;
+
+  color: var(--jc-text) !important;
+
+  box-shadow:
+    0 0 0 3px rgba(6, 182, 212, 0.08) !important;
+}
+
+.form-select option {
+  background: var(--jc-panel);
+
+  color: var(--jc-text);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .jc-content {
+    padding: 30px 24px 42px;
+  }
+
+  .jc-topbar {
+    padding: 0 24px;
+  }
+
+  .jc-search {
+    width: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jc-app-shell {
+    display: block;
+  }
+
+  .jc-sidebar {
+    display: none;
+  }
+
+  .jc-main {
+    width: 100%;
+  }
+
+  .jc-topbar {
+    height: auto;
+
+    min-height: 70px;
+
+    padding: 12px 16px;
+  }
+
+  .jc-search {
+    width: 100%;
+
+    max-width: none;
+  }
+
+  .jc-user-chip > div:nth-child(2) {
+    display: none;
+  }
+
+  .jc-content {
+    padding: 24px 16px 36px;
+  }
+
+  .jc-content h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jc-topbar {
+    gap: 10px;
+  }
+
+  .jc-search {
+    height: 44px;
+  }
+
+  .jc-avatar {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+  }
+
+  .jc-theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .jc-content {
+    padding: 20px 14px 30px;
+  }
+
+  .jc-dashboard-card {
+    padding: 18px;
+  }
+}
